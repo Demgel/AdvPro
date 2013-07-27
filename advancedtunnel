@@ -29,8 +29,8 @@ function returnToChest()
 	turtle.turnRight()
 	length = lengthVar
 	while lengthVar > 0 do
-			moveforward()
-			lengthVar = lengthVar - 1
+		moveforward()
+		lengthVar = lengthVar - 1
 	end
 	turtle.turnRight()
 	turtle.turnRight()
@@ -39,9 +39,9 @@ function returnToChest()
 	unload()	
 	--move to lastPos
 	while lengthVar < length do
-			moveforward()
-			lengthVar = lengthVar + 1
-		end
+		moveforward()
+		lengthVar = lengthVar + 1
+	end
 	--move to lastPos
 end
 
