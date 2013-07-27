@@ -300,7 +300,7 @@ function returnToChest()
 	turtle.turnRight()
 	turtle.turnRight()
 	--move to chest
-	refuel()
+	getMoreFuel()
 	unload()	
 	--move to lastPos
 	while lengthVar < length do
@@ -311,7 +311,7 @@ function returnToChest()
 end
 ]]
 
-function refuel()
+function getMoreFuel()
 	if turtle.getFuelLevel() < 1000
 		turtle.refuel(all)
 		turtle.select(1)
