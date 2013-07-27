@@ -313,12 +313,11 @@ end
 
 function getMoreFuel()
 	local fuelLevel = turtle.getFuelLevel()
-	if fuelLevel() < 1000 then
-		turtle.refuel(all)
-		turtle.select(1)
-	else
-		turtle.select(1)
+	while fuelLevel() < 1000 then
+		turtle.refuel()
+		fuelLevel = turtle.getFuelLevel()
 	end
+	turtle.select(1)
 end
 
 -- Questions
