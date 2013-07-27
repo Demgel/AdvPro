@@ -10,53 +10,6 @@ TorchesQuestion = true
 
 -- Functions
 
-function unload()
-	for n=2,16 do
-		turtle.select(n)
-		turtle.drop()
-		end
-	end
-	turtle.select(1)
-end
-
-function returnToChest()
-	--local returnPos = {x = loc.x, y = loc.y, z = loc.z, facing = loc.facing}
-	--local fuelNeeded = loc.distanceToPos(_tSave.startPos) * 2 + 1
-	--loc.moveToPos(_tSave.startPos)
-	--loc.face((loc.facing + 2) % 4)
-
-	--move to chest
-	turtle.turnRight()
-	turtle.turnRight()
-	length = lengthVar
-	while lengthVar > 0 do
-		moveforward()
-		lengthVar = lengthVar - 1
-	end
-	turtle.turnRight()
-	turtle.turnRight()
-	--move to chest
-	refuel()
-	unload()	
-	--move to lastPos
-	while lengthVar < length do
-		moveforward()
-		lengthVar = lengthVar + 1
-	end
-	--move to lastPos
-end
-
-function refuel()
-	if turtle.getFuelLevel() < 1000
-		turtle.refuel(all)
-		turtle.select(1)
-		end
-	else
-		turtle.select(1)
-	end
-end
-
-
 function version() -- Version function
   return Version
 end
@@ -319,6 +272,52 @@ function smalltunnel() -- Mine a one wide tunnel
 		digdown()
 	end
 	placetorch()
+end
+
+function unload()
+	for n=2,16 do
+		turtle.select(n)
+		turtle.drop()
+		end
+	end
+	turtle.select(1)
+end
+
+function returnToChest()
+	--local returnPos = {x = loc.x, y = loc.y, z = loc.z, facing = loc.facing}
+	--local fuelNeeded = loc.distanceToPos(_tSave.startPos) * 2 + 1
+	--loc.moveToPos(_tSave.startPos)
+	--loc.face((loc.facing + 2) % 4)
+
+	--move to chest
+	turtle.turnRight()
+	turtle.turnRight()
+	length = lengthVar
+	while lengthVar > 0 do
+		moveforward()
+		lengthVar = lengthVar - 1
+	end
+	turtle.turnRight()
+	turtle.turnRight()
+	--move to chest
+	refuel()
+	unload()	
+	--move to lastPos
+	while lengthVar < length do
+		moveforward()
+		lengthVar = lengthVar + 1
+	end
+	--move to lastPos
+end
+
+function refuel()
+	if turtle.getFuelLevel() < 1000
+		turtle.refuel(all)
+		turtle.select(1)
+		end
+	else
+		turtle.select(1)
+	end
 end
 
 -- Questions
