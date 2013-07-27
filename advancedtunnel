@@ -292,14 +292,19 @@ function returnToChest()
 		moveforward()
 		lengthVar = lengthVar - 1
 	end
+	heightVar = tunnelheight
+	while heightVar > 1 do
 	turtle.down()
+	end
 	--move to chest
 --	getMoreFuel()
 	unload()	
 	--move to lastPos
 	turtle.turnRight()
 	turtle.turnRight()
+	while heightVar < tunnelheight do
 	turtle.up()
+	end
 	while lengthVar < lengthReturn do
 		moveforward()
 		lengthVar = lengthVar + 1
