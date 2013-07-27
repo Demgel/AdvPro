@@ -313,7 +313,7 @@ end
 
 function getMoreFuel()
 	if turtle.getFuelLevel() < 1000
-		turtle.refuel(all)
+	--	turtle.refuel()
 		turtle.select(1)
 	else
 		turtle.select(1)
