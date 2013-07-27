@@ -283,10 +283,6 @@ function unload()
 end
 
 function returnToChest()
-	--local returnPos = {x = loc.x, y = loc.y, z = loc.z, facing = loc.facing}
-	--local fuelNeeded = loc.distanceToPos(_tSave.startPos) * 2 + 1
-	--loc.moveToPos(_tSave.startPos)
-	--loc.face((loc.facing + 2) % 4)
 
 	--move to chest
 	turtle.turnRight()
@@ -298,14 +294,13 @@ function returnToChest()
 	end
 	turtle.down()
 	--move to chest
---	getMoreFuel()
+	getMoreFuel()
 	unload()	
 	--move to lastPos
 	turtle.turnRight()
 	turtle.turnRight()
 	turtle.up()
-	lengthVar = lengthVar + 1
-	while lengthVar <= lengthReturn do
+	while lengthVar < lengthReturn do
 		moveforward()
 		lengthVar = lengthVar + 1
 	end
