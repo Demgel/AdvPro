@@ -313,7 +313,7 @@ end
 
 function getMoreFuel()
 	local fuelLevel = turtle.getFuelLevel()
-	while fuelLevel() < 1000 then
+	while fuelLevel() < 1000 do
 		turtle.refuel()
 		fuelLevel = turtle.getFuelLevel()
 	end
