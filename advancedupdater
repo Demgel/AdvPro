@@ -2,8 +2,8 @@
 -- Version 1.0 12/15/2012
 
 -- Config
-local author = "Henness0666"
-local project = "Advanced-Programs"
+local author = "Demgel"
+local project = "AdvPro"
 local branch = "master"
 local screenw,screenh = term.getSize()
 
