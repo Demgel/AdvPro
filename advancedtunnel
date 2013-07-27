@@ -298,10 +298,12 @@ function returnToChest()
 	end
 	turtle.turnRight()
 	turtle.turnRight()
+	turtle.down()
 	--move to chest
 	getMoreFuel()
 	unload()	
 	--move to lastPos
+	turtle.up()
 	while lengthVar < length do
 		moveforward()
 		lengthVar = lengthVar + 1
@@ -415,6 +417,9 @@ while startheight > 0 do
 	startheight = startheight - 1
 end
 while lengthVar < length do
+	if turtle.getItemCount(16) > 0 then
+	returnToChest()
+	end
 	lengthVar = lengthVar + 1
 	digforward()
 	if width > 1 then
