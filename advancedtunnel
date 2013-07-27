@@ -294,7 +294,7 @@ function returnToChest()
 	end
 	turtle.down()
 	--move to chest
-	getMoreFuel()
+--	getMoreFuel()
 	unload()	
 	--move to lastPos
 	turtle.turnRight()
