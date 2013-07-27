@@ -304,6 +304,7 @@ function returnToChest()
 	turtle.turnRight()
 	turtle.turnRight()
 	turtle.up()
+	lengthVar = lengthVar + 1
 	while lengthVar <= lengthReturn do
 		moveforward()
 		lengthVar = lengthVar + 1
