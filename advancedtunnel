@@ -501,6 +501,8 @@ while lengthVar < length do
 			turtle.turnLeft()
 			turtle.turnLeft()
 			unload()
+			turtle.turnLeft()
+			turtle.turnLeft()
 		end
 		term.setCursorPos( 1, 2 )
 	else
