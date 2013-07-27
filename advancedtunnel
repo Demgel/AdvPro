@@ -283,7 +283,7 @@ function unload()
 	turtle.select(1)
 end
 
-
+--[[
 function returnToChest()
 	--local returnPos = {x = loc.x, y = loc.y, z = loc.z, facing = loc.facing}
 	--local fuelNeeded = loc.distanceToPos(_tSave.startPos) * 2 + 1
@@ -310,7 +310,7 @@ function returnToChest()
 	end
 	--move to lastPos
 end
-
+]]
 --[[
 function refuel()
 	if turtle.getFuelLevel() < 1000
