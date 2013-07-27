@@ -497,6 +497,10 @@ while lengthVar < length do
 			print ("Out of Torches!")
 		else
 			print ("Tunnel Complete!")
+			turtle.down()
+			turtle.turnLeft()
+			turtle.turnLeft()
+			unload()
 		end
 		term.setCursorPos( 1, 2 )
 	else
