@@ -275,7 +275,7 @@ function smalltunnel() -- Mine a one wide tunnel
 end
 
 function unload()
-	for n=2,16 do
+	for n=1,16 do
 		turtle.select(n)
 		turtle.drop()
 		end
