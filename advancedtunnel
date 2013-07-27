@@ -405,6 +405,7 @@ end
 createtable()
 
 -- Mining Loop
+turtle.select(1)
 turtle.up()
 while startheight > 0 do
 	local moved = turtle.up()
